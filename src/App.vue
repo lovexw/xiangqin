@@ -1,10 +1,22 @@
 <template>
   <div class="app-container">
     <router-view></router-view>
+    <Disclaimer ref="disclaimerRef" />
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
+import Disclaimer from './components/Disclaimer.vue';
+
+const disclaimerRef = ref(null);
+
+onMounted(() => {
+  // 在页面加载时显示免责声明
+  setTimeout(() => {
+    disclaimerRef.value.showDisclaimer();
+  }, 1000);
+});
 </script>
 
 <style>
