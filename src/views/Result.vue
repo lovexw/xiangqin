@@ -183,7 +183,7 @@ const profiles = [
     housingRequirement: '婚后希望有自己的小窝，可以共同购买。',
     requirements: '希望对方有上进心，性格温和，有责任感，年龄相仿。',
     introduction: '性格开朗，喜欢旅行和美食，工作认真负责，生活中也很会照顾人。希望找到能一起成长的伴侣。',
-    avatar: '/src/image/1.jpg'
+    avatar: '/image/1.jpg'
   },
   {
     id: 2,
@@ -200,7 +200,7 @@ const profiles = [
     housingRequirement: '已有一套小房子，希望婚后能一起生活。',
     requirements: '希望对方诚实守信，有稳定工作，不酗酒不赌博，有共同话题。',
     introduction: '程序员一枚，热爱编程和阅读，性格安静但不内向，喜欢简单的生活，向往稳定的家庭。',
-    avatar: '/src/image/2.jpg'
+    avatar: '/image/2.jpg'
   },
   {
     id: 3,
@@ -217,7 +217,7 @@ const profiles = [
     housingRequirement: '希望男方有房或有购房能力，可以共同还贷。',
     requirements: '希望对方孝顺，有责任心，性格开朗，喜欢小孩。',
     introduction: '幼儿园老师，喜欢小朋友，性格温柔体贴，会做饭，喜欢养花和手工艺，希望组建一个温馨的家。',
-    avatar: '/src/image/3.jpg'
+    avatar: '/image/3.jpg'
   },
   {
     id: 4,
@@ -234,7 +234,7 @@ const profiles = [
     housingRequirement: '已有房产，希望男方也有自己的住所或有共同置业的能力。',
     requirements: '希望对方有良好的教育背景，稳定的事业，有共同的价值观和生活目标。',
     introduction: '医生，工作忙碌但充实，生活自律，喜欢健身和烹饪，希望找到能互相理解、共同进步的伴侣。',
-    avatar: '/src/image/4.JPG'
+    avatar: '/image/4.JPG'
   },
   {
     id: 5,
@@ -251,7 +251,7 @@ const profiles = [
     housingRequirement: '希望婚后有自己的住所，可以共同努力购买。',
     requirements: '希望对方有上进心，性格温和，有幽默感，喜欢旅行。',
     introduction: '银行职员，性格活泼开朗，喜欢交朋友，热爱生活，擅长沟通，希望找到能一起享受生活的伴侣。',
-    avatar: '/src/image/5.jpg'
+    avatar: '/image/5.jpg'
   },
   {
     id: 6,
@@ -268,7 +268,7 @@ const profiles = [
     housingRequirement: '希望男方有稳定住所或有购房计划。',
     requirements: '希望对方真诚善良，有责任感，愿意共同经营家庭。',
     introduction: '刚毕业的大学老师，热爱教育事业，性格温和，喜欢读书和音乐，希望找到志同道合的伴侣一起成长。',
-    avatar: '/src/image/6.jpg'
+    avatar: '/image/6.jpg'
   },
   {
     id: 7,
@@ -285,7 +285,7 @@ const profiles = [
     housingRequirement: '已有两套房产，希望男方也有自己的事业和资产。',
     requirements: '希望对方有良好的教育背景和家庭背景，事业有成，有共同语言。',
     introduction: '互联网公司高管，工作能力强，生活品质高，喜欢艺术和高雅活动，希望找到能力相当、志趣相投的伴侣。',
-    avatar: '/src/image/7.JPG'
+    avatar: '/image/7.JPG'
   },
   {
     id: 8,
@@ -302,7 +302,7 @@ const profiles = [
     housingRequirement: '父母已购置婚房，希望男方家庭能理解并尊重。',
     requirements: '希望对方有稳定工作，性格温和，有责任心，最好是公务员或事业单位。',
     introduction: '事业单位工作人员，性格温柔贤惠，善解人意，喜欢烹饪和家居布置，向往简单幸福的生活。',
-    avatar: '/src/image/8.jpg'
+    avatar: '/image/8.jpg'
   },
   {
     id: 9,
