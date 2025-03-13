@@ -1,6 +1,12 @@
 <template>
   <div class="match-container">
     <div class="match-content">
+      <div class="header-actions">
+        <a-button type="default" @click="goHome" class="home-btn">
+          <home-outlined />
+          返回主页
+        </a-button>
+      </div>
       <h1 class="title">选择您的择偶条件</h1>
       <a-form
         :model="formState"
@@ -8,6 +14,15 @@
         @finish="onFinish"
         class="match-form"
       >
+        <a-form-item
+          label="期望性别"
+          name="gender"
+        >
+          <a-radio-group v-model:value="formState.gender">
+            <a-radio value="female">女</a-radio>
+            <a-radio value="male">男</a-radio>
+          </a-radio-group>
+        </a-form-item>
         <a-form-item
           label="年龄范围"
           name="ageRange"
@@ -94,8 +109,11 @@
         </a-form-item>
 
         <a-form-item class="form-buttons">
-          <a-button type="default" @click="onReset">重置</a-button>
-          <a-button type="primary" html-type="submit">开始匹配</a-button>
+          <div class="button-group">
+            <a-button type="default" @click="onReset" class="action-btn">重置</a-button>
+            <a-button type="primary" html-type="submit" class="action-btn">开始匹配</a-button>
+            <a-button type="primary" ghost @click="onRandomMatch" class="action-btn">随机匹配</a-button>
+          </div>
         </a-form-item>
       </a-form>
     </div>
@@ -105,10 +123,16 @@
 <script setup>
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
+import { HomeOutlined } from '@ant-design/icons-vue';
 
 const router = useRouter();
 
+const goHome = () => {
+  router.push('/');
+};
+
 const formState = reactive({
+  gender: 'female',
   ageRange: [25, 35],
   heightRange: [155, 170],
   minIncome: '10000',
@@ -130,6 +154,7 @@ const onFinish = values => {
 };
 
 const onReset = () => {
+  formState.gender = 'female';
   formState.ageRange = [25, 35];
   formState.heightRange = [155, 170];
   formState.minIncome = '10000';
@@ -137,6 +162,19 @@ const onReset = () => {
   formState.hasHouse = false;
   formState.occupation = [];
   formState.dowryRange = '20';
+};
+
+const onRandomMatch = () => {
+  const randomFilters = {
+    gender: formState.gender,
+    isRandom: true
+  };
+  router.push({
+    path: '/result',
+    query: {
+      filters: JSON.stringify(randomFilters)
+    }
+  });
 };
 </script>
 
@@ -170,9 +208,26 @@ const onReset = () => {
 
 .form-buttons {
   display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-top: 24px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.action-btn {
+  min-width: 100px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 :deep(.ant-form-item) {

@@ -1,28 +1,36 @@
 <template>
   <div class="home-container">
     <div class="home-content">
-      <h1 class="title">AI时代的相亲平台</h1>
-      <p class="subtitle">找到您的理想伴侣</p>
+      <h1 class="title">同城交友相亲平台</h1>
+      <p class="subtitle">安全可靠的本地婚恋交友服务</p>
       <div class="features">
         <div class="feature-item">
           <heart-outlined class="feature-icon" />
-          <h3>智能匹配</h3>
-          <p>基于您的喜好和要求，智能推荐最合适的对象</p>
+          <h3>同城匹配</h3>
+          <p>智能推荐身边的优质单身，让缘分触手可及</p>
         </div>
         <div class="feature-item">
           <safety-outlined class="feature-icon" />
-          <h3>安全可靠</h3>
-          <p>所有个人信息严格保密，为您提供安全的交友环境</p>
+          <h3>真人认证</h3>
+          <p>严格的实名认证体系，确保每个用户都是真实可靠</p>
         </div>
         <div class="feature-item">
           <smile-outlined class="feature-icon" />
-          <h3>高效便捷</h3>
-          <p>简单几步，轻松找到心仪的TA</p>
+          <h3>线下活动</h3>
+          <p>定期举办同城交友活动，创造真实相遇的机会</p>
         </div>
       </div>
-      <a-button type="primary" size="large" class="start-btn" @click="startMatching">
-        开始寻找缘分
-      </a-button>
+      <div class="action-buttons">
+        <a-button type="primary" size="large" class="start-btn" @click="startMatching">
+          开始寻找有缘人
+        </a-button>
+        <a-button type="primary" ghost size="large" class="activity-btn" @click="goToActivity">
+          查看相亲活动
+        </a-button>
+        <a-button type="primary" ghost size="large" class="success-btn" @click="goToSuccess">
+          幸福案例
+        </a-button>
+      </div>
     </div>
   </div>
 </template>
@@ -35,6 +43,14 @@ const router = useRouter();
 
 const startMatching = () => {
   router.push('/match');
+};
+
+const goToActivity = () => {
+  router.push('/activity');
+};
+
+const goToSuccess = () => {
+  router.push('/success');
 };
 </script>
 
@@ -117,6 +133,30 @@ const startMatching = () => {
   border-radius: 25px;
   box-shadow: 0 5px 15px rgba(255, 77, 79, 0.3);
   transition: all 0.3s ease;
+  margin-right: 16px;
+}
+
+.activity-btn, .success-btn {
+  font-size: 1.1rem;
+  height: 50px;
+  padding: 0 30px;
+  border-radius: 25px;
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+  transition: all 0.3s ease;
+}
+
+.activity-btn:hover, .success-btn:hover {
+  color: #ff7875;
+  border-color: #ff7875;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 79, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .start-btn:hover {

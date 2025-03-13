@@ -19,6 +19,14 @@ const router = createRouter({
     {
       path: '/result',
       component: () => import('./views/Result.vue')
+    },
+    {
+      path: '/activity',
+      component: () => import('./views/Activity.vue')
+    },
+    {
+      path: '/success',
+      component: () => import('./views/Success.vue')
     }
   ]
 })
