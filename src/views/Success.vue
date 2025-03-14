@@ -154,14 +154,15 @@ const successStories = [
 }
 
 .couple-image {
-  height: 200px;
+  width: 100%;
+  height: 300px;
   overflow: hidden;
 }
 
 .couple-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .story-info {

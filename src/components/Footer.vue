@@ -22,6 +22,7 @@
     <div class="footer-bottom">
       <p>© 2024 同城交友相亲平台 版权所有</p>
       <p>本平台仅提供信息服务，请谨慎交友，注意人身安全</p>
+      <a href="https://www.xiaowuleyi.com" target="_blank" class="personal-link">访问开发者主页</a>
     </div>
   </footer>
 </template>
@@ -82,6 +83,19 @@
   margin: 5px 0;
   font-size: 14px;
   color: #666;
+}
+
+.personal-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.personal-link:hover {
+  color: #1890ff;
 }
 
 @media (max-width: 768px) {

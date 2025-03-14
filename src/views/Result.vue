@@ -669,18 +669,30 @@ onMounted(() => {
 }
 
 .card-cover {
-  height: 200px;
+  width: 100%;
+  height: 300px;
   overflow: hidden;
-  background: #f5f5f5;
 }
 
 .profile-avatar {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.card-title {
+.profile-avatar-large {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.profile-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profile-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -735,7 +747,7 @@ onMounted(() => {
 .profile-avatar-large img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .profile-basic-info {
